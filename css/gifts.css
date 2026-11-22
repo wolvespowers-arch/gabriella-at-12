@@ -1,0 +1,94 @@
+:root{
+  --night:#261638; --purple:#75449B; --pink:#E9B9DE;
+  --white:#F6E8FF; --gold:#D9B46C; --lav:#B9A4EF;
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html,body{margin:0;min-height:100%}
+body{
+  background:linear-gradient(to bottom,var(--night) 0%,var(--night) 50%,var(--purple) 100%);
+  background-attachment:fixed;
+  color:var(--white);
+  font-family:"Cormorant Garamond",Georgia,"Times New Roman",serif;
+}
+.wrap{
+  max-width:420px;margin:0 auto;text-align:center;
+  padding:calc(20px + env(safe-area-inset-top)) 18px calc(32px + env(safe-area-inset-bottom));
+}
+.back{
+  display:inline-block;margin-bottom:14px;color:var(--lav);
+  font-style:italic;text-decoration:none;border-bottom:1px solid var(--lav);
+}
+h1{
+  margin:0;font-family:"Pinyon Script","Snell Roundhand",cursive;
+  font-weight:400;font-size:2.8rem;line-height:1.1;color:var(--pink);
+}
+.intro{margin:8px 0 4px;font-size:1.2rem;font-style:italic;color:var(--lav)}
+.count{margin:0 0 20px;font-size:1.1rem;font-weight:700;color:var(--gold)}
+
+/* Gift boxes */
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.gift{
+  position:relative;aspect-ratio:1;display:grid;place-items:center;
+  border:2px solid var(--gold);border-radius:10px;
+  background:var(--purple);cursor:pointer;padding:0;overflow:hidden;
+}
+.gift::before,.gift::after{content:"";position:absolute;background:var(--pink)}
+.gift::before{left:50%;top:0;bottom:0;width:14%;transform:translateX(-50%)}
+.gift::after{top:50%;left:0;right:0;height:14%;transform:translateY(-50%)}
+.gift span{
+  position:relative;z-index:1;width:2.3rem;height:2.3rem;
+  display:grid;place-items:center;border-radius:50%;
+  background:var(--night);color:var(--gold);
+  font-family:inherit;font-size:1.2rem;font-weight:700;
+}
+.gift.open{background:var(--night)}
+.gift.open::before,.gift.open::after{background:var(--gold);opacity:.35}
+.gift:focus-visible,.close:focus-visible,.letter-link:focus-visible{
+  outline:3px solid var(--white);outline-offset:3px;
+}
+
+/* Gift pop-up */
+dialog{
+  width:min(88vw,360px);padding:26px 22px;text-align:center;
+  border:2px solid var(--gold);border-radius:12px;
+  background:var(--night);color:var(--white);
+}
+dialog::backdrop{background:rgba(26,15,41,.82)}
+.kind{margin:0;font-style:italic;font-size:1.1rem;color:var(--lav)}
+.num{
+  margin:2px 0 14px;font-family:"Pinyon Script","Snell Roundhand",cursive;
+  font-size:2.4rem;color:var(--gold);
+}
+.msg{margin:0 0 22px;font-size:1.35rem;line-height:1.45}
+.close{
+  padding:10px 26px;border:2px solid var(--gold);border-radius:999px;
+  background:transparent;color:var(--gold);
+  font:inherit;font-weight:700;font-size:1.1rem;cursor:pointer;
+}
+.close:active{background:var(--gold);color:var(--night)}
+
+/* Letter link (appears after all 12 gifts) */
+.letter-link{
+  display:inline-block;margin-top:26px;padding:12px 28px;
+  border:2px solid var(--gold);border-radius:999px;
+  color:var(--gold);font-weight:700;font-size:1.2rem;text-decoration:none;
+}
+.letter-link:active{background:var(--gold);color:var(--night)}
+
+/* Letter page */
+.paper{
+  margin-top:18px;padding:30px 24px;text-align:left;
+  background:var(--white);color:var(--night);
+  border:2px solid var(--gold);border-radius:6px;
+  outline:1px solid var(--gold);outline-offset:6px;
+}
+.paper .to{
+  margin:0 0 14px;font-family:"Pinyon Script","Snell Roundhand",cursive;
+  font-size:2.3rem;line-height:1.1;color:var(--purple);
+}
+.paper p{margin:0 0 14px;font-size:1.3rem;line-height:1.5}
+.paper .sign{
+  margin:22px 0 0;font-family:"Pinyon Script","Snell Roundhand",cursive;
+  font-size:2rem;line-height:1.2;color:var(--purple);text-align:right;
+    }
