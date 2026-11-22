@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The Princess Adventure</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,700;1,500&family=Pinyon+Script&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/gifts.css">
+<link rel="stylesheet" href="../css/extras.css">
+</head>
+<body>
+<main class="wrap">
+  <a class="back" href="letter.html">Back to the letter</a>
+  <h1>The Princess Adventure</h1>
+  <p class="intro">Match all the pairs to unlock the next room.</p>
+  <p class="count">Moves: <span id="moves">0</span></p>
+  <div class="board" id="board"></div>
+
+  <section class="win" id="win" hidden>
+    <p class="winTitle">You did it, Gabriella!</p>
+    <p>The Memory Palace is now open.</p>
+    <a class="next-link" href="memories.html">Open the Memory Palace</a>
+  </section>
+
+  <button class="btn" id="again" type="button">Shuffle again</button>
+</main>
+<script src="../js/adventure.js"></script>
+</body>
+</html>
