@@ -1,0 +1,72 @@
+/* Shared by adventure, memories and celebration pages */
+h1 span{display:block}
+h1 .given{font-size:1.7rem;color:var(--lav)}
+h1 .main{font-size:3.6rem}
+
+.next-link,.btn{
+  display:inline-block;margin-top:26px;padding:12px 28px;
+  border:2px solid var(--gold);border-radius:999px;
+  background:transparent;color:var(--gold);
+  font:inherit;font-weight:700;font-size:1.2rem;
+  text-decoration:none;cursor:pointer;
+}
+.next-link:active,.btn:active{background:var(--gold);color:var(--night)}
+.next-link:focus-visible,.btn:focus-visible{outline:3px solid var(--white);outline-offset:3px}
+
+/* Adventure: memory game */
+.board{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.card{
+  aspect-ratio:1;padding:0;border:2px solid var(--gold);border-radius:10px;
+  background:var(--purple);color:transparent;
+  font-family:Georgia,serif;font-size:2.4rem;cursor:pointer;
+}
+.card.on{background:var(--night);color:var(--gold)}
+.card.ok{background:var(--night);color:var(--pink);border-color:var(--pink)}
+.card:focus-visible{outline:3px solid var(--white);outline-offset:3px}
+.win{
+  margin-top:22px;padding:20px;border:2px solid var(--gold);border-radius:12px;
+  background:var(--night);
+}
+.win p{margin:0 0 6px;font-size:1.3rem;line-height:1.4}
+.win .winTitle{
+  font-family:"Pinyon Script","Snell Roundhand",cursive;
+  font-size:2.3rem;color:var(--gold);
+}
+
+/* Memory Palace: photo gallery */
+.gallery{margin-top:8px}
+.frame{
+  margin:0 0 24px;padding:10px 10px 14px;
+  background:var(--white);color:var(--night);border-radius:4px;
+}
+.frame:nth-child(odd){transform:rotate(-1.2deg)}
+.frame:nth-child(even){transform:rotate(1.2deg)}
+.frame img{display:block;width:100%;height:auto;border-radius:2px}
+.frame figcaption{
+  margin-top:10px;font-family:"Pinyon Script","Snell Roundhand",cursive;
+  font-size:1.7rem;line-height:1.2;color:var(--purple);
+}
+.empty{font-style:italic;color:var(--lav);font-size:1.2rem}
+
+/* Celebration */
+.cake{display:block;width:min(86vw,300px);height:auto;margin:10px auto 0}
+.cake .plate{fill:var(--gold)}
+.cake .tier{stroke:var(--gold);stroke-width:1.5}
+.cake .tier1{fill:var(--purple)}
+.cake .tier2{fill:var(--pink)}
+.cake .tier3{fill:var(--white)}
+.cake .band{stroke:var(--gold);stroke-width:2;fill:none}
+.cake .candle{fill:var(--pink)}
+.cake .flame{fill:var(--gold)}
+.cake.out .flame{display:none}
+.fullname{
+  margin:4px 0 0;font-family:"Pinyon Script","Snell Roundhand",cursive;
+  font-size:1.9rem;color:var(--gold);
+}
+.closing{margin:18px 0 0;font-size:1.35rem;line-height:1.45}
+
+.bit{
+  position:fixed;top:-16px;width:8px;height:14px;z-index:20;
+  pointer-events:none;animation:fall linear forwards;
+}
+@keyframes fall{to{transform:translateY(112vh) rotate(540deg)}}
