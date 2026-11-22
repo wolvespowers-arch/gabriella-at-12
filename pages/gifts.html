@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The Twelve Royal Gifts</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,700;1,500&family=Pinyon+Script&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/gifts.css">
+</head>
+<body>
+<main class="wrap">
+  <a class="back" href="../index.html">Back to the castle</a>
+  <h1>The Twelve Royal Gifts</h1>
+  <p class="intro" id="intro">One for every year. Tap a gift to open it.</p>
+  <p class="count"><span id="opened">0</span> of 12 opened</p>
+  <div class="grid" id="grid"></div>
+  <a class="letter-link" id="letterLink" href="letter.html" hidden>Open your letter</a>
+</main>
+
+<dialog id="dlg">
+  <p class="kind" id="dKind"></p>
+  <p class="num" id="dNum"></p>
+  <p class="msg" id="dMsg"></p>
+  <button type="button" id="dClose" class="close">Close</button>
+</dialog>
+
+<script src="../js/gifts.js"></script>
+</body>
+</html>
